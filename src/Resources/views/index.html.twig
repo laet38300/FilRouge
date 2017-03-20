@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+    {% block stylesheets %}
+        {% include 'stylesheets.html.twig' %}
+    {% endblock %}
+</head>
+<body>
+    <header>
+        {% block header %}
+            {% include 'header.html.twig' %}
+        {% endblock %}
+    </header>
+
+
+    <div class="container">
+        {% block body %}<p>Accueil</p>{% endblock %}
+    </div>
+
+    <footer>
+        {% block footer %}
+            {% include 'footer.html.twig' %}
+        {% endblock %}
+    </footer>
+
+    {% block javascripts %}
+        {% include 'scripts.html.twig' %}
+    {% endblock %}
+</body>
+</html>
